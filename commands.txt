@@ -1,0 +1,5 @@
+aws ecr get-login-password --region us-east-1 | sudo docker login --username AWS --password-stdin 477824770261.dkr.ecr.us-east-1.amazonaws.com
+
+docker build -t 477824770261.dkr.ecr.us-east-1.amazonaws.com/facerecognitionecr .
+
+docker push 477824770261.dkr.ecr.us-east-1.amazonaws.com/facerecognitionecr:latest
