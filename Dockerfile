@@ -61,8 +61,8 @@ RUN apt-get install -y awscli
 
 #AWS Configure
 RUN mkdir ~/.aws
-#RUN aws s3 cp s3://cc-project-extra/config ~/.aws/
-#RUN aws s3 cp s3://cc-project-input/test_case_1/test_0.mp4 /home/app/.
+#RUN aws s3 cp s3://cloud-project-extra/config ~/.aws/
+#RUN aws s3 cp s3://cloud-project-input/test_case_1/test_0.mp4 /home/app/.
 COPY config ~/.aws
 COPY test_0.mp4 ${FUNCTION_DIR}
 COPY encoding ${FUNCTION_DIR}
