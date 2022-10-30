@@ -1,0 +1,6 @@
+FROM 667469892511.dkr.ecr.us-east-1.amazonaws.com/facerecognitionecr:latest
+
+COPY handler.py ${FUNCTION_DIR}
+
+ENTRYPOINT [ "/usr/local/bin/python3", "-m", "awslambdaric" ]
+CMD ["handler.lambda_handler" ]

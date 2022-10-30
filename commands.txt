@@ -1,0 +1,19 @@
+sudo apt update
+sudo snap install docker
+sudo apt install -y awscli
+
+aws ecr get-login-password --region us-east-1 | sudo docker login --username AWS --password-stdin 445395669996.dkr.ecr.us-east-1.amazonaws.com
+
+aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 667469892511.dkr.ecr.us-east-1.amazonaws.com
+
+aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws
+
+sudo docker build -t 445395669996.dkr.ecr.us-east-1.amazonaws.com/facerecognitionecr .
+
+sudo docker build -t 667469892511.dkr.ecr.us-east-1.amazonaws.com/facerecognitionecr .
+
+sudo docker push 445395669996.dkr.ecr.us-east-1.amazonaws.com/facerecognitionecr:latest
+
+sudo docker push 667469892511.dkr.ecr.us-east-1.amazonaws.com/facerecognitionecr:latest
+
+sudo docker pull public.ecr.aws/m9s1f1h9/facerecognitionecrpublic:latest
