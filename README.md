@@ -23,8 +23,7 @@ S3 bucket names: `cc-project-input` and `cc-project-output`
 
 
 ### Karthik – (ASU ID: 1225910467).
- - I worked on the implementation and testing of the `handler.py` file. What should happen when the lambda function is called is decided by this script. I worked on preloading data into DynamoDB as key-value pairs, where the primary key is the person's name and the value includes details like the person's graduation year, major, and image name. I also worked on establishing a connection between DynamoDB and the handler function, determining what occurs when the lambda function is called. The face recognition functions are also made to be called by this function. After facial recognition was completed, I retrieved the results from the database to display them as a result.
- - I also tested the code robustly from start to finish which includes extracting the frames, calling the lambda function, encoding using face_recognition, and comparison of the encodings. I made numerous improvements while the code was being tested to make sure the flow was smooth from beginning to end.
+- I worked on the testing and evaluation of all the components as units and the design of the project as a whole. I had tested the application for multiple test cases of different numbers of image frames. For testing the different test cases, I had to check the DynamoDB for the time taken for the retrieval of the image,table creation, input storage, Checking whether the S3 buckets are connected and do not have any unusual delay, and accuracy of the processing of the image frames. I also tested the complete code flow for multiple inputs and checking edge cases, especially large numbers of input(100 images). I had to also check whether DynamoDB was returning correct results and the output csv had accurate values.
 
 
 
