@@ -29,7 +29,9 @@ S3 bucket names: `cc-project-input` and `cc-project-output`
 
 
 ### Tirth Hihoriya  -  (ASU ID: 1225413475 )
- - I have designed the App-Tier. The app-tier includes basic image classification program. It receives a task from the RequestQueue and processes it. Once it is done with processing, it sends the output to the Response Queue. It also stores the input in input-bucket and output in output-bucket. If no new task comes to it, it waits for 5 seconds. I have tested the app-tier code rigorously and updated it to have more robust code. In the code there are many points where there is a chance of exceptions. These exceptions may occur due to reasons such as, the code might not get a message from RequestQueue, the input and output might not be stored in S3 buckets successfully, the message form RequestQueue might not be deleted successfully after it gets processed, etc. Thus, to handle it the code is taken care of with the ‘try-except’ block. If any exception occurs then it will wait for 5 seconds and will try to process again.
+- I worked on the implementation and testing of the `handler.py` file. What should happen when the lambda function is called is decided by this script. I worked on preloading data into DynamoDB as key-value pairs, where the primary key is the person's name and the value includes details like the person's graduation year, major, and image name. I also worked on establishing a connection between DynamoDB and the handler function, determining what occurs when the lambda function is called. The face recognition functions are also made to be called by this function. After facial recognition was completed, I retrieved the results from the database to display them as a result.
+ - I also tested the code robustly from start to finish which includes extracting the frames, calling the lambda function, encoding using face_recognition, and comparison of the encodings. I made numerous improvements while the code was being tested to make sure the flow was smooth from beginning to end.
+
  
  <hr>
  
