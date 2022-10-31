@@ -10,9 +10,10 @@ Group members:
 
 <hr>
 
-SQS queue names: `RequestQueue` and `ResponseQueue`
+S3 input bucket name: `cloud-computing-project-input` 
+S3 output bucket name: `cloud-computing-project-output`
 
-S3 bucket names: `cc-project-input` and `cc-project-output`
+Table_name: `student_data`
 
 <hr>
 
