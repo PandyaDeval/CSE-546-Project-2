@@ -11,6 +11,7 @@ Group members:
 <hr>
 
 S3 input bucket name: `cloud-computing-project-input` 
+
 S3 output bucket name: `cloud-computing-project-output`
 
 Table_name: `student_data`
